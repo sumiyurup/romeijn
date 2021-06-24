@@ -1560,3 +1560,7 @@ label:focus,
 	height: auto !important;
 	margin-left: 7.5px;
 }
+
+.mobileviewh1{
+	font-size: 20px;
+}
