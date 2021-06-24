@@ -1558,4 +1558,5 @@ label:focus,
 .mcenter{
 	width: 100% !important;
 	height: auto !important;
+	margin-left: 7.5px;
 }
