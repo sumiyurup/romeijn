@@ -145,7 +145,6 @@ iframe {
 	padding: 10px 10px;
 	box-shadow: 0 20px 42px rgba(0, 0, 0, 0.25);
     background-color: #fff;
-    webkit-border-radius: 8px 8px;
     -moz-border-radius: 8px 8px;
     border-radius: 8px 8px;
 }
@@ -1556,8 +1555,7 @@ label:focus,
 	text-align:center;
 }
 
-@media (min-width: 768px) {
-	.mcenter{
-		width: 100%;
-	}
+.mcenter{
+	width: 100% !important;
+	height: auto !important;
 }
