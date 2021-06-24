@@ -1558,8 +1558,6 @@ label:focus,
 
 @media (min-width: 768px) {
 	.mcenter{
-		width: 80px;
-		padding-left: 50%;
-		padding-right: 50%;
+		width: 100%;
 	}
 }
