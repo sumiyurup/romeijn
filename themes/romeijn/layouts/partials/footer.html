@@ -1,0 +1,41 @@
+<footer >
+	<div class="footer-top">
+		<div class="container">
+			<div class="row">
+				<div class="offset-md-2 col-md-8  col-sm-12 align-self-center">	
+					<ul class="footer-link">
+						{{ range .Site.Menus.footernav }}
+							<li>
+							  <a href="{{ .URL | relURL }}"> {{ .Name }}</a>
+							</li>
+						  {{ end }}
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer-bottom">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-md-12 col-12 col">
+					{{ .Site.Params.copyright}}
+				</div> 
+				<div class="col-lg-6 col-md-12 col-12 col">
+					<ul class="social-media">
+						{{ range .Site.Menus.footersocial }}
+							<li>
+							  <a href="{{ .URL | relURL }}">{{ .Pre }} {{ .Name }}</a>
+							</li>
+						  {{ end }}
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+{{- partial "js.html" . -}}
+
+
+</body>
+
+</html>

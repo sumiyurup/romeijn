@@ -1,0 +1,33 @@
+<!-- 
+   ================================
+    Slider area start
+    =================================
+     -->
+    <div class="slider-area home__2">
+        <div class="slider-active owl-carousel home__2">
+			{{ range .Site.Data.banner  }}
+            <div class="single-slider" style="background-image: url({{ .bannerBg  }})" data-top-bottom="transform: translateY(300px);" data-bottom-top="transform: translateY(-300px);">
+                <div class="slide-content">
+                    <div class="container">
+                        <div class="row">
+							<div class="col-xl-6 col-md-6 col-sm-12">
+								<h2>{{ .title }}</h2>
+								{{ .description | safeHTML }}
+								<a href="{{ .buttonUrl }}" class="btn-mr tp-primary ">{{ .buttonText }}</a>
+							</div>
+							<div class="col-xl-6 col-md-6 col-sm-12">
+								<img src="{{ .image }}" alt="mac" class="{{ .image }}">
+							</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end single slider -->
+			{{ end }}
+			
+		</div>
+	</div>
+
+
+
+

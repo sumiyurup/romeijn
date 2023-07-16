@@ -1,0 +1,13 @@
+<div class="schedule-bar">
+	<div class="container">
+		<div class="row">
+			<div class="col-12 col-xl-12 col-md-12 text-center">
+				<div class="offer-content animation" data-animation="fadeInUp" data-animation-delay="0.1s">
+					<h2>{{ .Site.Params.schedule.title | safeHTML }}</h2>
+					<h3>{{ .Site.Params.schedule.subtitle | safeHTML }}</h3>
+					<a href="{{ .Site.Params.schedule.buttonUrl }}" class="btn-mr tp-primary ">{{ .Site.Params.schedule.buttonText }}</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

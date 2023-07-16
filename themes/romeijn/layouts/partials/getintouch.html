@@ -1,0 +1,90 @@
+<div class="section get-in-touch get--inTouchArea">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 col-md-12 col-12 col animation" data-animation="slideInLeft" data-animation-delay="0.1s">
+				<h2 class="section-title"> {{ .Site.Params.getInTouch.title | safeHTML }} </h2>
+				<p class="text-desc">{{ .Site.Params.getInTouch.subtitle | safeHTML }} </p>
+					<ul class="contact-info">
+						<li>
+							<span class="icon">
+								<i class="fa fa-envelope"></i>
+							</span>
+							<span class="info">
+								<h3>E-mail Address</h3>
+								<p><a href="mailto:{{ .Site.Params.getInTouch.email}}">{{ .Site.Params.getInTouch.email | safeHTML }}</a></p>
+							</span>
+						</li>
+						<li>
+							<span class="icon">
+								<i class="fa fa-phone"></i>
+							</span>
+							<span class="info">
+								<h3>Phone Number</h3>
+								<p><a href="tel:{{ .Site.Params.getInTouch.phone | safeHTML }}">{{ .Site.Params.getInTouch.phone | safeHTML }}</a></p>
+							</span>
+						</li>
+						<li>
+							<span class="icon">
+								<i class="fa fa-map-marker"></i>
+							</span>
+							<span class="info">
+								<h3>Location</h3>
+								{{ .Site.Params.getInTouch.location | safeHTML }}
+								
+							</span>
+						</li>
+					</ul>
+					
+				
+			</div>
+			 <div class="col-lg-6 col-md-12 col-12 col animation GetInBox contact-form" data-animation="slideInRight" data-animation-delay="0.2s">
+				
+                        <form action="https://formspree.io/{{ .Site.Params.email }}" enctype="application/x-www-form-urlencoded" method="post" class="contact-form">
+                            <div class="form-row">
+								<div class="col-md-5">
+                                    <label>Your Name : </label>
+                                </div>
+                                <div class="col-md-7">
+                                    <input type="text" id="name" class="form-control" name="name" required>
+                                </div>
+							</div>
+							<div class="form-row">
+								<div class="col-md-5">
+                                    <label>Your Email Address :
+ </label>
+                                </div>
+                                <div class="col-md-7">
+                                    <input type="email" class="form-control" name="email" id="email" required>
+                                </div>
+							</div>
+							<div class="form-row">
+								<div class="col-md-5">
+                                    <label>Subject : </label>
+                                </div>
+                                <div class="col-md-7">
+                                    <input type="text" class="form-control" name="subject" id="subject" required>
+                                </div>
+							</div>
+							<div class="form-row">
+								<div class="col-md-5">
+                                    <label>Write something: </label>
+                                </div>
+                                <div class="col-md-7">
+									<textarea class="form-control" name="write" id="subject"></textarea >
+                                </div>
+							</div>
+                            <div class="form-row">
+								<div class="offset-md-5 col-md-7">
+										<button type="submit" class="btn-mr tp-primary ">SEND</button>
+                                </div>
+                                
+                            </div> 
+                        </form>
+			 
+			 </div>
+		</div>
+	</div>
+	
+	
+</div>
+			

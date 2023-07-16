@@ -1,0 +1,69 @@
+ <!-- 
+   ================================
+    testimonials section two start
+    =================================
+     -->
+    <div class="testimonials-sectionA2">
+        <div class="container">
+            <div class="row">
+				
+                <div class="col col-12 text-center">
+                    <h2 class="section-title">our client  <span>reviews</span></h2>
+                </div>
+                <!-- end section tiitle -->
+            
+            <div class="spacer-1"></div>
+			
+                <div class="col-12">
+                    <div class="tesBoxWrapper">
+                        <div class="minni--boxWrapper">
+                            
+                            <div class="tstiText-active owl-carousel animation" data-animation="fadeInDown" data-animation-delay="0.1s">
+								{{range .Site.Data.reviews.testimonials }}
+									<div class="singleTtext">
+										<p>{{ .comment }}</p>
+										<h4> <span>{{ .name }}</span> {{ .post }}</h4>
+									</div>
+								{{ end }}
+							
+							
+                                <!-- end single text -->
+                            </div>
+                            <!-- end testimonilas active  -->
+							<div class="row testi-user">
+                                <div class="col-lg-6 offset-lg-3 animation" data-animation="fadeInbottom" data-animation-delay="0.1s">
+                                    <div class="testImg-active owl-carousel">
+										{{range .Site.Data.reviews.testimonials }}
+											<div class="singleTesimgThumb">
+											{{ if eq .image " " }}
+												<i class="fa fa-user"> </i>
+												
+											{{ else }}
+												<img src="{{ .image }}" alt="{{ .name }}"> 
+											{{ end }}
+											
+											
+											</div>
+										{{ end }}
+									
+                                        <!-- end single img -->
+                                    </div>
+                                    <!-- end testi img active carosle -->
+                                </div>
+                                <!-- end column -->
+                            </div>
+                            <!-- inner row -->
+                        </div>
+                        <!-- mini box wrapper -->
+                    </div>
+                    <!-- end testimonials box wrapper -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 
+   ================================
+    testimonials section two end
+    =================================
+     -->

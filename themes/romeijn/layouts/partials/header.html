@@ -1,0 +1,77 @@
+<!-- 
+   ================================
+    Header Area Start
+    =================================
+     -->
+    <header class="main-header">
+        <div class="header-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="top-contact">
+                            <ul>
+                                <li> <a href="mailto:{{ .Site.Params.getInTouch.email | safeHTML }}"><span><i class="fa fa-envelope"></i></span>{{ .Site.Params.getInTouch.email | safeHTML }}</a></li>
+                            </ul>
+                        </div>
+                    </div><!-- end top contact -->
+                    <div class="col-md-4">
+                        <div class="top-social-icon">
+                            <ul>
+                                <li><a href="tel:{{ .Site.Params.getInTouch.phone | safeHTML }}"><span><i class="fa fa-phone-square"></i> </span>{{ .Site.Params.getInTouch.phone | safeHTML }}
+								</a></li>
+                            </ul>
+                        </div>
+                    </div><!-- end top socila icon -->
+                </div>
+            </div>
+        </div><!-- end header top -->
+		<div class="site-main-header">
+            <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-2  col-md-2  col-sm-4">
+                    <div class="site-logo">
+                        <a href="/">
+                            <img src="{{ .Site.Params.logo | safeHTML | absURL }}" alt="{{.Site.Title }}">
+                        </a>
+                    </div>
+                </div>
+                <!-- end logo -->
+                <div class="col-lg-10 col-md-10  col-sm-8">
+                    <div class="mobile-menu">
+                        <div class="menu-click">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <!-- mobile menu -->
+                    <div class="main-menu">
+                        <ul>
+							{{ range .Site.Menus.main }}
+								{{ if .HasChildren }}
+									<li class="menu-item-has-children">
+										<a href="{{ .url }}"> {{ .Name }}</a>
+										<ul class="sub-menu">
+											{{ range .Children }}
+												<li><a href="{{ .url }}">{{ .Name }}</a></li>
+											{{ end }}
+										</ul>
+									</li>
+								{{ else }}
+									<li><a href="{{ .url }}"> {{ .Name }}</a> </li>
+								{{ end }}
+							{{end}}
+							{{ if .Site.Params.freeTrial.enable }}
+								<li><a class="btn-free" href="{{ .url }}"> Free Trial of Apps </a> </li>
+							{{ end }}
+                        </ul>
+                    </div>
+                    <!-- end menu markup -->
+                </div>
+                <!-- end menu area -->
+                
+            </div>
+        </div>
+        </div>
+	
+	</header>

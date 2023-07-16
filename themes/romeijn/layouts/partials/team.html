@@ -1,0 +1,40 @@
+ <!-- 
+   ================================
+    our team start
+    =================================
+     -->
+    <div class="our__team__area">
+        <div class="container">
+            <div class="row">
+                <div class="col col-12 text-center">
+                    <h2 class="section-title"><span>our Leadership</span> Team</h2>
+                </div>
+                <!-- end section tiitle -->
+            </div>
+            <div class="spacer-1"></div>
+            <!-- end spacer -->
+            <!-- end row -->
+            <ul class="row team-active group owl-carousel">
+				{{range .Site.Data.team.teams }}
+					<li class="list-group-item animation" data-animation="fadeInUp" data-animation-delay="0.1s">
+                    <div class="single-team">
+                        <img src="{{ .image }}"  alt="{{ .name }}">
+                        <h4>{{ .name }}</h4>
+                        <h5> {{ .post }}</h5>
+                    </div>
+                </li>
+                <!-- end single team -->
+			{{ end }}
+			
+				
+                
+            </ul>
+            <!-- end row -->
+        </div>
+    </div>
+
+    <!-- 
+   ================================
+    our team End
+    =================================
+     -->

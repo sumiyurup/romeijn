@@ -1,12 +1,3 @@
-@font-face {
-  font-family: "Raleway", sans-serif;
-  src: url(/webfonts/Raleway-VariableFont_wght.ttf);
-}
-
-@font-face {
-  font-family: "Poppins", sans-serif;
-  src: url(/webfonts/Poppins-Regular.ttf);
-}
 ul {
   padding: 0;
 }
@@ -155,6 +146,7 @@ iframe {
   padding: 10px 10px;
   box-shadow: 0 20px 42px rgba(0, 0, 0, 0.25);
   background-color: #fff;
+  webkit-border-radius: 8px 8px;
   -moz-border-radius: 8px 8px;
   border-radius: 8px 8px;
 }
@@ -1553,29 +1545,15 @@ label:focus,
   font-weight: 800;
 }
 
-@media (max-width: 768px) {
-  .desktopview {
-    display: none;
-  }
+.new-content p {
+  text-align: justify;
 }
 
-@media (min-width: 768px) {
-  .mobileview {
-    display: none;
-  }
+.new-content p:last-child {
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #b09987;
 }
-
-.mobilestylep {
-  color: #f1d204;
-  text-align: center;
-}
-
-.mcenter {
-  width: 100% !important;
-  height: auto !important;
-  margin-left: 7.5px;
-}
-
-.mobileviewh1 {
-  font-size: 45px !important;
+.mt-5 {
+  content: "";
+  margin-top: 2rem !important;
 }
